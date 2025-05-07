@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FoodDeliveryAppTask</string>
+    <string name="burgerr">Burger</string>
+    <string name="dessert">Dessert</string>
+    <string name="chicken">Chicken</string>
+    <string name="appetizer">Appetizer</string>
 </resources>
