@@ -4,11 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fooddeliveryapptask.R
 import com.example.fooddeliveryapptask.databinding.ProductItemBinding
 import com.example.fooddeliveryapptask.model.Product
 
 
 class ProductAdapter(private var list: List<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+
 
     class ViewHolder(val binding: ProductItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -34,6 +36,14 @@ class ProductAdapter(private var list: List<Product>) : RecyclerView.Adapter<Pro
         val context = holder.itemView.context
         val resId = context.resources.getIdentifier(product.image, "drawable", context.packageName)
         holder.binding.ProductImageView.setImageResource(resId)
+
+        var isFavorited = false
+
+        holder.binding.favoriteAddsButton.setOnClickListener {
+            isFavorited = !isFavorited
+            val icon = if (isFavorited) R.drawable.baseline_favorite_24 else R.drawable.baseline_favorite_border_24
+            holder.binding.favoriteAddsButton.setImageResource(icon)
+        }
 
     }
 }
