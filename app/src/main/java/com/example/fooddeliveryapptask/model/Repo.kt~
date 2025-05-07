@@ -1,0 +1,28 @@
+package com.example.fooddeliveryapptask.model
+
+import com.example.fooddeliveryapptask.model.RemoteData.Iremote
+import com.example.fooddeliveryapptask.model.RemoteData.Remote
+
+class Repo private constructor(
+    private var remoteData : Iremote,
+):Irepo {
+
+    companion object
+    {
+        private var instance : Repo? = null
+
+        fun getInstance( remoteData : Iremote):Repo
+        {
+            return instance ?: synchronized(this)
+            {
+                val temp = Repo(remoteData)
+                instance=temp
+                temp
+            }
+        }
+    }
+
+    override fun getProductsByCategory(category: String): List<Product> {
+        TODO("Not yet implemented")
+    }
+}

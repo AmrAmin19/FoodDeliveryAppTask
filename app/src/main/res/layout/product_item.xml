@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/RandomMealCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="4dp"
+        android:outlineSpotShadowColor="@color/PrimaryColor"
+        android:outlineAmbientShadowColor="@color/PrimaryColor"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- FrameLayout to maintain uniform image size -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ProductImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_image"
+                        android:scaleType="fitCenter"
+                        android:scaleX=".9"
+                        android:scaleY=".9"
+                        android:src="@drawable/burger" />
+                </FrameLayout>
+
+                <!-- Favorite Button -->
+                <ImageButton
+                    android:id="@+id/favoriteAddsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_white"
+                    android:contentDescription="@string/burgerr"
+                    android:src="@drawable/selector_btn" />
+
+                <!-- Cart Button -->
+                <ImageButton
+                    android:id="@+id/cartAddsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/favoriteAddsButton"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_white"
+                    android:contentDescription="cart"
+                    android:src="@drawable/baseline_add_24" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Title TextView (Product Name) -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Product Name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RandomMealCardView" />
+
+    <!-- Price TextView (moved below the title) -->
+
+    <!-- Rating Layout (optional, commented out) -->
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
+        android:text="Price"
+        android:textColor="@color/PrimaryColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_marginHorizontal="10dp"-->
+<!--    android:layout_marginVertical="5dp"-->
+<!--    android:layout_height="wrap_content">-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/RandomMealCardView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:elevation="4dp"-->
+<!--        app:cardCornerRadius="25dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/title"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:cardElevation="4dp"-->
+<!--        android:outlineSpotShadowColor="@color/PrimaryColor"-->
+<!--        android:outlineAmbientShadowColor="@color/PrimaryColor"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                &lt;!&ndash; FrameLayout to maintain uniform image size &ndash;&gt;-->
+<!--                <FrameLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ProductImageView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@drawable/rounded_image"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:scaleX=".9"-->
+<!--                        android:scaleY=".9"-->
+<!--                        android:src="@drawable/burger" />-->
+<!--                </FrameLayout>-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/favoriteAddsButton"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:contentDescription="@string/burgerr"-->
+<!--                    android:src="@drawable/selector_btn" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    &lt;!&ndash; Title TextView &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:text=" "-->
+<!--        android:textColor="@color/PrimaryColor"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="start"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/RandomMealCardView" />-->
+
+<!--    &lt;!&ndash; Price and Rating Layout &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/title">-->
+
+<!--        &lt;!&ndash; Price TextView &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/priceTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text=" "-->
+<!--            android:textColor="@color/PrimaryColor"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        &lt;!&ndash; Rating Icon and Text beside the Price &ndash;&gt;-->
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/ratingIcon"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/baseline_star_24" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/ratingText"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="4.5"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/colorPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="16sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold" />&ndash;&gt;-->
+
+<!--    </LinearLayout>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
