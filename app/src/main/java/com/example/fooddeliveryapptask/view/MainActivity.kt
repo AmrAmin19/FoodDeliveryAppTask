@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         viewModel=ViewModelProvider(this,mainFactory)[MainViewModel::class.java]
 
 
-        productAdapter = ProductAdapter(emptyList())
+        productAdapter = ProductAdapter(emptyList()){ binding.cartBadge.text = "${it}"}
         binding.productsRecycel.adapter = productAdapter
 
         updateChips()
@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                 Log.d("AmrTest", "list size = ${it.size} + ${it.first().name}")
             }
         }
+
+       // binding.cartBadge.text = "3"
 
     }
 

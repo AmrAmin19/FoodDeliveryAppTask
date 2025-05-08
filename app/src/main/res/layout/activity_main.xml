@@ -51,9 +51,9 @@
                 android:layout_marginEnd="-4dp"
                 android:background="@drawable/circle_badge_background"
                 android:gravity="center"
-                android:text="3"
+                android:text="0"
                 android:textColor="@android:color/white"
-                android:textSize="10sp" />
+                android:textSize="14sp" />
         </FrameLayout>
     </LinearLayout>
 
@@ -145,7 +145,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productsRecycel"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="510dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         android:paddingHorizontal="4dp"
@@ -168,6 +168,7 @@
         android:paddingBottom="4dp"
         app:itemIconTint="@color/nav_buttom_selector"
         app:itemTextColor="@color/nav_buttom_selector"
+        app:itemActiveIndicatorStyle="@style/Bottom.Nav.Bar.Custom.Item.Indicator"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
